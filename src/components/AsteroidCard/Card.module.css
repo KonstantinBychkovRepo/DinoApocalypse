@@ -1,0 +1,88 @@
+/* Root Styles (переменные для повторного использования) */
+:root {
+    --border-radius: 12px;        /* Радиус скругления углов */
+    --border-color: #ddd;          /* Цвет границы */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Цвет тени */
+    --transition-speed: 0.3s;    /* Скорость анимаций */
+}
+
+.card {
+    display: flex;               /* Используем flexbox для выравнивания */
+    flex-direction: column;      /* Элементы располагаются в колонку */
+    align-items: center;         /* Выравниваем элементы по центру по горизонтали */
+    justify-content: center;   /* Выравниваем элементы по центру по вертикали */
+    width: 90%;                  /* Ширина карточки 90% от родительского контейнера */
+    max-width: 920px;            /* Максимальная ширина карточки */
+    height: auto;                /* Высота определяется содержимым */
+    aspect-ratio: 4.6 / 1;        /* Соотношение сторон (ширина / высота) */
+    margin: 20px auto;           /* Отступ сверху и снизу, авто-выравнивание по горизонтали */
+    overflow: hidden;            /* Скрываем содержимое, выходящее за границы */
+    position: relative;          /* Относительное позиционирование для дочерних элементов */
+    border-radius: var(--border-radius); /* Скругление углов (значение берется из переменной) */
+    border: 1px solid var(--border-color); /* Тонкая граница (значение берется из переменной) */
+    box-shadow: 0 2px 5px var(--shadow-color); /* Небольшая тень (значение берется из переменной) */
+    transition: transform var(--transition-speed) ease-in-out,
+    box-shadow var(--transition-speed) ease-in-out; /* Плавные переходы для transform и box-shadow */
+    cursor: pointer;              /* Изменяем курсор на "указатель" при наведении */
+}
+
+.card:hover {
+    transform: translateY(-3px); /* Поднимаем карточку при наведении */
+    box-shadow: 0 5px 15px var(--shadow-color); /* Увеличиваем тень при наведении */
+}
+
+.cardRed {
+    background: linear-gradient(90deg, #FFB199 0%, #FF0844 100%); /* Красный градиент */
+}
+
+.regularCard {
+    background: linear-gradient(90deg, #CFF37D 0%, #7DE88C 100%); /* Зеленый градиент */
+}
+
+.cardActions {
+    display: flex;               /* Используем flexbox для выравнивания */
+    gap: 16px;                   /* Расстояние между элементами */
+    margin-top: 20px;            /* Отступ сверху */
+    width: 100%;
+    justify-content: center;
+
+}
+
+.disabled {
+    opacity: 0.6;                /* Полупрозрачность для неактивных элементов */
+    pointer-events: none;       /* Отключаем события мыши для неактивных элементов */
+    filter: grayscale(50%);       /* Обесцвечиваем неактивные элементы */
+}
+
+
+
+.disabled {
+    opacity: 0.6;                /* Полупрозрачность для неактивных элементов */
+    pointer-events: none;       /* Отключаем события мыши для неактивных элементов */
+    filter: grayscale(50%);       /* Обесцвечиваем неактивные элементы */
+}
+
+@media (max-width: 1100px) {
+    /* Стили для экранов шириной до 1100px (мобильные устройства) */
+    .card {
+        width: 95%;                  /* Ширина карточки 95% от родительского контейнера */
+        flex-direction: row;        /* Элементы располагаются в строку */
+        display: flex;               /* Используем flexbox для выравнивания */
+        max-width: 288px;            /* Максимальная ширина карточки */
+        aspect-ratio: 0.74 / 1;      /* Соотношение сторон (ширина / высота) */
+        border-radius: 12px;         /* Скругление углов */
+        margin: 10px auto;           /* Уменьшаем отступы сверху и снизу */
+        border: none;                /* Убираем границу */
+        box-shadow: 0 1px 3px var(--shadow-color); /* Небольшая тень (значение берется из переменной) */
+    }
+
+    .cardRed {
+        background-size: cover;      /* Градиент заполняет всю карточку */
+        background-repeat: no-repeat;/* Запрещаем повторение фона */
+    }
+
+    .regularCard {
+        background-size: cover;      /* Градиент заполняет всю карточку */
+        background-repeat: no-repeat;/* Запрещаем повторение фона */
+    }
+}

@@ -1,0 +1,80 @@
+/* Root Styles (Корневые стили: определяем переменные для удобства) */
+:root {
+    --base-font: helvetica, sans-serif;    /* Основной шрифт */
+    --text-color: #333;                    /* Цвет текста */
+    --link-color: #007bff;                  /* Цвет ссылок */
+    --active-font-weight: 700;            /* Жирность активного элемента */
+    --gap-wrapper: 2%;                     /* Отступ между элементами обертки */
+    --filtersWrapper-padding: 16px;         /* Внутренние отступы обертки фильтров */
+}
+
+.body {
+    position: relative;                  /* Относительное позиционирование */
+    min-height: 100vh;                  /* Минимальная высота - 100% высоты экрана */
+    display: flex;                       /* Flexbox для выравнивания содержимого */
+    flex-direction: column;              /* Направление flex-элементов - колонка */
+}
+
+.filtersWrapper {
+    font-family: var(--base-font);       /* Шрифт (из переменной) */
+    display: flex;                       /* Flexbox для выравнивания */
+    flex-wrap: wrap;                      /* Разрешаем перенос элементов на новую строку */
+    gap: var(--gap-wrapper);             /* Отступ между элементами (из переменной) */
+    justify-content: space-between;      /* Распределяем элементы по краям */
+    align-items: center;                 /* Выравниваем элементы по центру по вертикали */
+    width: 95%;                          /* Ширина - 95% от родителя */
+    max-width: 900px;                  /* Максимальная ширина - 900px */
+    margin: 20px auto;                   /* Отступы сверху и снизу, авто-горизонтальное выравнивание */
+    padding: var(--filtersWrapper-padding);/* Внутренние отступы (из переменной) */
+    border-radius: 8px;                  /* Скругление углов */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Небольшая тень */
+    background-color: #f9f9f9;           /* Светлый фон */
+}
+
+.showDangerousOnly {
+    display: flex;                       /* Flexbox для выравнивания */
+    align-items: center;                 /* Выравниваем элементы по центру по вертикали */
+    gap: 8px;                             /* Отступ между элементами */
+    flex: 1 1 200px;                     /* Flex-свойства: расти, сжиматься, базовая ширина */
+}
+
+.distanceMode {
+    display: flex;                       /* Flexbox для выравнивания */
+    align-items: center;                 /* Выравниваем элементы по центру по вертикали */
+    gap: 5px;                             /* Отступ между элементами */
+    flex: 2 1 350px;                     /* Flex-свойства */
+    flex-wrap: wrap;                      /* Разрешаем перенос */
+    justify-content: flex-end;            /* Выравниваем элементы по правому краю */
+}
+
+.distanceChooser {
+    background: none;                     /* Убираем фон */
+    border: none;                         /* Убираем рамку */
+    cursor: pointer;                      /* Курсор - указатель */
+    text-decoration: none;                /* Убираем подчеркивание */
+    padding: 5px 10px;                    /* Внутренние отступы */
+    margin: 0;                            /* Убираем отступы */
+    font-family: var(--base-font);       /* Шрифт (из переменной) */
+    font-size: 16px;                      /* Размер шрифта */
+    line-height: 20px;                    /* Высота строки */
+    text-align: center;                   /* Выравнивание текста по центру */
+    transition: color 0.2s ease;          /* Плавное изменение цвета */
+    border-radius: 4px;                  /* Скругление углов */
+}
+
+.distanceChooser:hover {
+    color: var(--link-color);             /* Цвет ссылки при наведении (из переменной) */
+    text-decoration: underline;            /* Подчеркивание при наведении */
+    background-color: rgba(0, 123, 255, 0.05); /* Светлый фон при наведении */
+}
+
+.checkBox {
+    height: 18px;                         /* Высота */
+    width: 18px;                          /* Ширина */
+    cursor: pointer;                      /* Курсор - указатель */
+}
+
+.active {
+    font-weight: var(--active-font-weight);/* Жирность шрифта (из переменной) */
+    text-decoration: none;                /* Убираем подчеркивание */
+}

@@ -1,0 +1,80 @@
+/* Root Styles (Общие стили для удобства) */
+:root {
+    --base-font: Helvetica, sans-serif; /* Основной шрифт */
+    --title-font-size: 24px;          /* Размер шрифта заголовка */
+    --text-font-size: 16px;           /* Размер шрифта обычного текста */
+    --font-weight-bold: 700;          /* Жирный шрифт */
+    --font-weight-normal: 400;        /* Обычный шрифт */
+    --line-height-title: 32px;       /* Высота строки заголовка */
+    --line-height-text: 24px;        /* Высота строки обычного текста */
+    --content-text-color: #333;      /* Цвет текста */
+    --underline-color: #333;        /*Цвет линии подчеркивания */
+}
+
+/* Название контента */
+.contentName {
+    position: absolute;               /* Абсолютное позиционирование */
+    width: 380px;                      /* Ширина */
+    height: auto;                     /* Высота определяется содержимым */
+    top: 24px;                         /* Отступ сверху */
+    left: 347px;                        /* Отступ слева */
+    font-family: var(--base-font);   /* Шрифт (из переменной) */
+    font-size: var(--title-font-size);/* Размер шрифта (из переменной) */
+    font-weight: var(--font-weight-bold);/* Жирный шрифт (из переменной) */
+    line-height: var(--line-height-title);/* Высота строки (из переменной) */
+    text-align: left;                  /* Выравнивание текста по левому краю */
+    text-decoration: underline;        /* Подчеркивание */
+    text-decoration-color: var(--underline-color);
+    text-underline-position: from-font;/* Положение подчеркивания */
+    text-decoration-skip-ink: none;   /* Подчеркивание не заходит на буквы */
+    letter-spacing: 0.5px;            /* Небольшое межбуквенное расстояние */
+}
+
+/* Обёртка для даты, расстояния и размера */
+.contentWrapper {
+    position: absolute;               /* Абсолютное позиционирование */
+    width: 380px;                      /* Ширина */
+    height: auto;                     /* Высота определяется содержимым */
+    top: 72px;                         /* Отступ сверху */
+    left: 347px;                        /* Отступ слева */
+    display: flex;                     /* Flexbox для выравнивания */
+    flex-direction: column;            /* Элементы в колонку */
+    gap: 8px;                          /* Расстояние между элементами */
+}
+
+/* Общие стили для даты, расстояния и размера */
+.contentDate,
+.contentDistance,
+.contentSize {
+    position: relative;               /* Относительное позиционирование */
+    font-family: var(--base-font);   /* Шрифт (из переменной) */
+    font-size: var(--text-font-size); /* Размер шрифта (из переменной) */
+    font-weight: var(--font-weight-normal);/* Обычный шрифт (из переменной) */
+    line-height: var(--line-height-text); /* Высота строки (из переменной) */
+    text-align: left;                  /* Выравнивание по левому краю */
+    text-underline-position: from-font;/* Положение подчеркивания */
+    text-decoration-skip-ink: none;   /* Подчеркивание не заходит на буквы */
+    color: var(--content-text-color);  /* Цвет текста (из переменной) */
+}
+
+/* Медиа-запрос для адаптации под мобильные устройства */
+@media (max-width: 1100px) {
+    .contentName {
+        position: absolute;           /* Абсолютное позиционирование */
+        left: 20px;                   /* Отступ слева */
+        top: 120px;                  /* Отступ сверху */
+        width: auto;                   /* Ширина определяется содержимым */
+        max-width: 90%;                /* Максимальная ширина */
+    }
+
+    .contentWrapper {
+        position: absolute;           /* Абсолютное позиционирование */
+        left: 20px;                   /* Отступ слева */
+        top: 165px;                  /* Отступ сверху */
+        width: auto;
+        max-width: 90%;               /* Максимальная ширина */
+        height: auto;                  /* Высота определяется содержимым */
+        margin: 0;                    /* Убираем отступы */
+        text-align: left;             /* Выравнивание по левому краю */
+    }
+}

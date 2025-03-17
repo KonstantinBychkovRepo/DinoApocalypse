@@ -1,0 +1,29 @@
+:root {
+    --base-font: Helvetica, sans-serif;
+    --text-color: #555555;
+    --font-size: 15px;
+    --transition-duration: 0.3s; /* Duration for transitions */
+}
+
+.bottom {
+    text-align: center;
+    margin-bottom: 30px; /* Further increased margin */
+    font-family: var(--base-font);
+    font-size: var(--font-size);
+    font-weight: 500;
+    color: var(--text-color);
+    letter-spacing: 0.03em; /* Slightly increased letter spacing */
+    line-height: 1.7; /* Further increased line height for better spacing */
+    padding: 10px 20px; /* Adjusted padding for a balanced look */
+    border-radius: 8px; /* Slightly more rounded corners */
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border for definition */
+    background-color: #f9f9f9; /* Very light background for contrast */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* Gentle shadow for depth */
+    transition: transform var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease-in-out; /* Smooth transition for multiple properties */
+    cursor: default; /* Keep the cursor as default */
+}
+
+.bottom:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12); /* Enhanced shadow on hover */
+}
