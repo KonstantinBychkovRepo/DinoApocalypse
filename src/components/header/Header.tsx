@@ -9,7 +9,7 @@ export const Header = memo(() => {
     return (
         <div className={styles.container}>
             <div>
-                <div className={styles.label}>ARMAGGEDON V</div>
+                <div className={styles.label}>Apocalypse</div>
                 <div className={styles.subLabel}>
                     Сервис мониторинга и уничтожения астероидов, опасно подлетающих к Земле.
                 </div>
