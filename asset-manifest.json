@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.207933f8.css",
-    "main.js": "/static/js/main.9d24e1db.js",
-    "static/media/space.png": "/static/media/space.7426854c11977c77af08.png",
-    "static/media/asteroid.png": "/static/media/asteroid.67b0c58be67884fe363a.png",
-    "index.html": "/index.html",
-    "main.207933f8.css.map": "/static/css/main.207933f8.css.map",
-    "main.9d24e1db.js.map": "/static/js/main.9d24e1db.js.map"
+    "main.css": "/DinoApocalypse/static/css/main.207933f8.css",
+    "main.js": "/DinoApocalypse/static/js/main.dae7231c.js",
+    "static/media/space.png": "/DinoApocalypse/static/media/space.7426854c11977c77af08.png",
+    "static/media/asteroid.png": "/DinoApocalypse/static/media/asteroid.67b0c58be67884fe363a.png",
+    "index.html": "/DinoApocalypse/index.html",
+    "main.207933f8.css.map": "/DinoApocalypse/static/css/main.207933f8.css.map",
+    "main.dae7231c.js.map": "/DinoApocalypse/static/js/main.dae7231c.js.map"
   },
   "entrypoints": [
     "static/css/main.207933f8.css",
-    "static/js/main.9d24e1db.js"
+    "static/js/main.dae7231c.js"
   ]
 }
